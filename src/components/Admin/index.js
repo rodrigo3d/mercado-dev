@@ -9,6 +9,7 @@
 import React, { Component } from 'react'
 import base, { auth } from '../../config/base'
 import { Link } from 'react-router-dom'
+import Loading from '../Partials/loading'
 import * as routes from '../../config/routes'
 
 class Admin extends Component {
@@ -40,13 +41,13 @@ class Admin extends Component {
 
   render() {
 
-      if (this.state.isAuthing) {
-        return <p>aguarde</p>
-    }
+    //   if (this.state.isAuthing) {
+    //     return <p>aguarde</p>
+    // }
 
 
   if (!this.state.isLoggedIn) {
-     this.props.history.push('/signin')
+     //this.props.history.push('/signin')
 }
     return (
 
@@ -63,6 +64,14 @@ class Admin extends Component {
               123
             </div>
           </div>
+
+          <div className="row">
+              {
+                this.state.isAuthing &&
+                <Loading />
+              }
+          </div>
+
         </div>
 
 

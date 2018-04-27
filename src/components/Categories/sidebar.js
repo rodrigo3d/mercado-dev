@@ -56,7 +56,7 @@ class CategoriesSidebar extends Component {
           <div className="card-body">
             <form onSubmit={this.submitSearch}>
               <div className="input-group">
-                <input type="text" className="form-control" ref="search" id="search" placeholder="" />
+                <input type="text" className="form-control" ref="search" id="search" placeholder="Procurar..." />
                 <span className="input-group-btn">
                   <button className="btn btn-secondary" type="submit"> <i className="fa fa-search"></i></button>
                 </span>

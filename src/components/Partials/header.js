@@ -33,7 +33,9 @@ const Header = (props) => {
               <Link className="nav-link dropdown-toggle" to="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</Link>
               <div className="dropdown-menu" aria-labelledby="dropdown01">
                 <Link className="dropdown-item" to={routes.ADMIN}>Admin</Link>
-                <Link className="dropdown-item" to="#">Another action</Link>
+                <Link className="dropdown-item" to={routes.SIGN_IN}>SignIn</Link>
+                <Link className="dropdown-item" to={routes.SIGN_UP}>SignUp</Link>
+                <Link className="dropdown-item" to={routes.SIGN_OUT}>SignOut</Link>
                 <Link className="dropdown-item" to="#">Something else here</Link>
               </div>
             </li>

@@ -6,6 +6,8 @@ import './App.css'
 import Header from './components/Partials/header'
 import Footer from './components/Partials/footer'
 
+import SignInPage from './components/Account/signin'
+
 import NotFound from './components/NotFound'
 
 import Home from './components/Home'
@@ -29,6 +31,8 @@ class App extends Component {
           <Route path='/categories' exact component={Categories} />
           <Route path='/categories/:urlCategory' exact component={Categories} />
           <Route path='/adverts/:urlProduct' exact component={AdvertsPage} />
+
+          <Route path={routes.SIGN_IN} exact component={SignInPage} />
 
           <Route path={routes.ADMIN} exact component={AdminPage} />
           <Route path={routes.ADMIN_CREATE} exact component={AdminCreatePage} />

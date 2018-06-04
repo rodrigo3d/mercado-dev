@@ -1,5 +1,5 @@
 /**
- * Mercado Dev
+ * Minhas Séries
  *
  * @author Rodrigo Ribeiro - me@rodrigo3d.com
  * @see https://mercado-dev.rodrigo3d.com
@@ -7,142 +7,145 @@
  */
 
 import React, { Component } from 'react'
-import base, { auth } from '../../config/base'
 import { Link } from 'react-router-dom'
-import Loading from '../Partials/loading'
-import * as routes from '../../config/routes'
+import { auth } from '../../config/base'
 
-class SignIn extends Component {
+const INITIAL_STATE = {
+  error: null
+};
+
+const updateByPropertyName = (propertyName, value) => () => ({
+  [propertyName]: value,
+});
+
+
+class SignUp extends Component {
   constructor(props) {
     super(props)
+
     this.state = {
-      adverts: {},
+      anuncios: {},
       isLoading: false,
 
       isAuthing: true,
       isLoggedIn: false,
-      user: null
+      user: null,
+      isInvalid: false
+
     }
+    //this.state = { ...INITIAL_STATE };
+
+
+    this.handleSignUp = this.handleSignUp.bind(this);
   }
 
   componentDidMount() {
 
 
-    auth.onAuthStateChanged(user => {
-      console.log(user);
-      this.setState({
-        isAuthing: false,
-        isLoggedIn: !!user,
-        user: user
-      })
+
+  }
+
+
+  handleSignUp(event) {
+
+    this.setState({
+      isInvalid: true
     })
+    //const username = this.refs.username.value
+    const email = this.refs.email.value
+    const passwdOne = this.refs.passwdOne.value
+
+
+    auth.createUserWithEmailAndPassword(email, passwdOne)
+      .then(authUser => {
+
+        alert(authUser.uid)
+
+        //   // Create a user in your own accessible Firebase Database too
+        //   // db.doCreateUser(authUser.uid, username, email)
+        //   //   .then(() => {
+        //   //     this.setState(() => ({ ...INITIAL_STATE }));
+        //   //     history.push('/');
+        //   //   })
+        //   //   .catch(error => {
+        //   //     this.setState(updateByPropertyName('error', error));
+        //   //   });
+
+      })
+      .catch(error => {
+        console.log(error)
+        //alert(error)
+        // this.state = { ...INITIAL_STATE };
+
+        // this.setState({
+        //   error: error.message
+        // })
+
+        this.setState(updateByPropertyName('error', error.message));
+        //this.setState(updateByPropertyName('error', null));
+      });
+
+    event.preventDefault();
 
   }
 
   render() {
+    const username = this.refs.username
+    const passwdOne = this.refs.passwdOne
+    const passwdTwo = this.refs.passwdTwo
 
-    //   if (this.state.isAuthing) {
-    //     return <p>aguarde</p>
-    // }
 
 
-  if (!this.state.isLoggedIn) {
-     //this.props.history.push('/signin')
-}
     return (
+      <div className="container mb-5 text-center">
+        <h1 className="mt-4 mb-3">SignUp
+        <small>&nbsp;</small>
+        </h1>
+        <hr />
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item">
+            <Link to="/SignUp">SignUp</Link>
+          </li>
+          <li className="breadcrumb-item active">Admin</li>
+        </ol>
 
-      <main className="py-5">
-        <div className="container">
-          <div className="row">
-            <Breadcrumb url={this.props.match.params.urlCategory} />
+        <div className="row">
+          <div className="col-lg-4">
           </div>
-          <div className="row">
-              {
-                this.state.isLoading &&
-                <Loading />
-              }
-          </div>
+          <div className="col-lg-4">
 
-          <div className="row">
-            <div className="col-md-12">
-              123
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-4">
+            {
+              this.state.error &&
+              <div className="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" className="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Atenção!</strong> {this.state.error}
+              </div>
+            }
 
-            </div>
-            <div className="col-md-4">
-              <form onSubmit={this.handleSubmit}>
-                <div className="row">
-                  <div className="col-md-12">
-                    <div className="form-group">
-                      <label htmlFor="name" className="sr-only">Nome</label>
-                      <input type="text" className="form-control" ref="name" id="name" placeholder="Nome" />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="price">Preço</label>
-                      <input type="number" className="form-control" ref="price" id="price" placeholder="Preço" />
-                    </div>
-                  </div>
+            <form onSubmit={this.handleSignUp}>
+              <div className="form-group">
+                <input type="text" className="form-control" ref="username" id="username" placeholder="Nome" />
+              </div>
+              <div className="form-group">
+                <input type="text" className="form-control" ref="email" id="email" placeholder="Email" />
+              </div>
+              <div className="form-group">
+                <input type="text" className="form-control" ref="passwdOne" id="passwdOne" placeholder="Senha" />
+              </div>
+              <div className="form-group">
+                <input type="text" className="form-control" ref="passwdTwo" id="passwdTwo" placeholder="Confirmar Senha" />
+              </div>
+              <button type="submit" className="btn btn-primary btn-block" disabled={this.state.isInvalid}>Salvar</button>
+            </form>
 
-
-
-                  <div className="col-md-12">
-                    <div className="form-group">
-                      <label htmlFor="phone">Telefone</label>
-                      <input type="text" className="form-control" ref="phone" id="phone" placeholder="Telefone" />
-                    </div>
-                  </div>
-                  {
-                    this.state.isSaving
-                      ?
-                      <div className="col-md-12">
-                        <button type="button" className="btn btn-primary btn-block">Aguarde, processando <i className="fa fa-spinner fa-pulse" aria-hidden="true"></i></button>
-                      </div>
-                      :
-                      <div className="col-md-12">
-                        <button type="reset" className="btn btn-secondary pull-left">Limpar</button>
-                        <button type="submit" className="btn btn-primary pull-right">Salvar</button>
-                      </div>
-                  }
-                </div>
-              </form>
-            </div>
           </div>
         </div>
-
-
-      </main >
+      </div>
     )
   }
 }
-const Breadcrumb = ({ url }) => {
-  return (
-    <div className="col-md-12">
-      <h1>SignIn <small>&nbsp;</small></h1>
-      <nav aria-label="breadcrumb">
-        {
-          !url
-            ?
-            <ol className="breadcrumb">
-              <li className="breadcrumb-item"><Link to={routes.ADMIN}>Admin</Link></li>
-              <li className="breadcrumb-item active" aria-current="page">AdminAdmin</li>
-            </ol>
-            :
-            <ol className="breadcrumb">
-              <li className="breadcrumb-item"><Link to={routes.HOME}>Home</Link></li>
-              <li className="breadcrumb-item"><Link to={routes.ADMIN}>Admin</Link></li>
-              <li className="breadcrumb-item active" aria-current="page">{url}</li>
-            </ol>
-        }
-      </nav>
-    </div>
-  )
-}
 
-export {
-  Breadcrumb
+SignUp.defaultProps = {
+  base: 'dark'
 }
-
-export default SignIn
+export default SignUp

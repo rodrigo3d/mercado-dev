@@ -1,39 +1,31 @@
-/**
- * Mercado Dev
- *
- * @author Rodrigo Ribeiro - me@rodrigo3d.com
- * @see https://mercado-dev.rodrigo3d.com
- * @see https://github.com/rodrigo3d/mercado-dev
- */
+// @author Rodrigo Ribeiro - me@rodrigo3d.com
 
 import React, { Component } from 'react'
 import base from '../../config/base'
-import { Link } from 'react-router-dom'
-
-import Loading from '../Partials/loading'
+import HomeAdverts from './adverts'
 import HomeHeader from './header'
-import HomeAdverts from '../Adverts/adverts'
-import * as routes from '../../config/routes'
-import './App.css'
+import HomeCategories from './categories'
 
 class Home extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
-      adverts: {},
-      categories: [],
+      anuncios: {},
+      categorias: [],
       isLoading: false
     }
   }
 
   componentDidMount() {
     this.setState({ isLoading: true })
-    base.bindToState('categories', {
+    base.bindToState('categorias', {
       context: this,
       asArray: true,
-      state: 'categories'
+      state: 'categorias'
     })
-    base.fetch('adverts', {
+
+    base.fetch('anuncios', {
       context: this,
       asArray: true,
       queries: {
@@ -41,7 +33,7 @@ class Home extends Component {
       }
     }).then(data => {
       this.setState({
-        adverts: data,
+        anuncios: data,
         isLoading: false
       })
     }).catch(error => {
@@ -52,59 +44,48 @@ class Home extends Component {
   render() {
     let index = 0
     return (
-      <main>
+      <section style={{backgroundColor: '#fcfcfc'}}>
         <HomeHeader />
-        <div className="album py-5 bg-light">
-          <div className="container">
+        <div className="container mb-5 mt-5">
+          {
+            this.state.isLoading &&
             <div className="row">
-              {
-                this.state.isLoading &&
-                <Loading />
-              }
-              {
-                Object.keys(this.state.adverts).map(key => {
-                  const ad = this.state.adverts[key]
-                  return <div class="col-md-4"><HomeAdverts ad={ad} id={ad.key} /></div>
-                })
-              }
-            </div>
-          </div>
-        </div>
-        <div className="album- py-5">
-          <div className="container">
-            <section className="jumbotron text-center">
-              <div className="container">
-                <h1 className="jumbotron-heading">CATEGORIAS</h1>
-                <p className="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-                <p>
-                  <Link to={routes.CATEGORIES} className="btn btn-primary my-2"> Categorias </Link>
+              <div className="col-lg-12">
+                <p className="text-center">
+                  <i className="fa fa-spinner fa-pulse fa-3x fa-fw text-secondary" aria-hidden="true"></i>
                 </p>
               </div>
-            </section>
-          </div>
-        </div>
-        <div className="album py-5 bg-light">
-          <div className="container">
-            <div className="row">
-              {
-                this.state.isLoading &&
-                <Loading />
-              }
-              {
-                this.state.categories.map((cat, indice) => {
-                  return [
-                    <Link to={`${routes.CATEGORIES}/${cat.url}`} className="btn btn-outline-secondary h-100 m-2 col-sm">
-                      <i className={`fa ${cat.icon} fa-4x`} aria-hidden="true"></i><br />
-                      {cat.title}
-                    </Link>,
-                    ++index % 4 === 0 && <div key={'c' + indice} className="w-100"></div>
-                  ]
-                })
-              }
             </div>
+          }
+          <div className="row">
+            {
+              !this.state.isLoading && Object.keys(this.state.anuncios).map(key => {
+                const anuncio = this.state.anuncios[key]
+                return <HomeAdverts anuncio={anuncio} key={key} />
+              })
+            }
+          </div>
+          {
+            !this.state.isLoading &&
+            <div className="row">
+              <div className="col-lg-12 text-center">
+                <h3>Categorias</h3>
+              </div>
+            </div>
+          }
+          <hr />
+          <div className="row">
+            {
+              !this.state.isLoading && this.state.categorias.map((cat, indice) => {
+                return [
+                  <HomeCategories categoria={cat} key={indice} />,
+                  ++index % 4 === 0 && <div key={'c' + indice} className="w-100"></div>
+                ]
+              })
+            }
           </div>
         </div>
-      </main>
+      </section>
     )
   }
 }

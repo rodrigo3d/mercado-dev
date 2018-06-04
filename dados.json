@@ -1,0 +1,73 @@
+{
+  "anuncios":{
+    "1": {
+      "nome": "Bicicleta Caloi 1",
+      "descricao": "semi nova",
+      "telefone": "35 99999999",
+      "vendedor": "Tulio Faria",
+      "preco": "a combinar",
+      "categoria": "esportes-e-lazer",
+      "foto": "http://placehold.it/200x140"
+    },
+    "2": {
+      "nome": "Bicicleta Caloi 2",
+      "descricao": "semi nova",
+      "telefone": "35 99999999",
+      "vendedor": "Tulio Faria",
+      "preco": "a combinar",
+      "categoria": "esportes-e-lazer",
+      "foto": "http://placehold.it/200x140"
+    },
+    "3": {
+      "nome": "Bicicleta Caloi 3",
+      "descricao": "semi nova",
+      "telefone": "35 99999999",
+      "vendedor": "Tulio Faria",
+      "preco": "a combinar",
+      "categoria": "esportes-e-lazer",
+      "foto": "http://placehold.it/200x140"
+    }
+  },
+  "categorias":[
+    {
+      "url":"automoveis",
+      "categoria": "Automóveis",
+      "icon": "fa-car"
+    },
+    {
+      "url":"imoveis",
+      "categoria": "Imóveis",
+      "icon": "fa-home"
+    },
+    {
+      "url":"eletronicos",
+      "categoria": "Eletrônicos",
+      "icon": "fa-mobile"
+    },
+    {
+      "url":"para-sua-casa",
+      "categoria": "Para sua casa",
+      "icon": "fa-lightbulb-o"
+    },
+    {
+      "url":"empregos-e-negocios",
+      "categoria": "Empregos e Negócios",
+      "icon": "fa-briefcase"
+    },
+    {
+      "url":"esportes-e-lazer",
+      "categoria": "Esportes e Lazer",
+      "icon": "fa-bicycle"
+    },
+    {
+      "url":"musica-e-hobbies",
+      "categoria": "Música e Hobbies",
+      "icon": "fa-music"
+    },
+    {
+      "url":"animais-e-acessorios",
+      "categoria": "Animais e Acessórios",
+      "icon": "fa-paw"
+    }
+  ]
+}

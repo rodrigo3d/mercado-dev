@@ -1,3 +1,11 @@
+/**
+ * React App Starter
+ *
+ * @author Rodrigo Ribeiro - me@rodrigo3d.com
+ * @see https://react-app-starter.rodrigo3d.com
+ * @see https://github.com/rodrigo3d/react-app-starter
+ */
+
 // In production, we register a service worker to serve assets from local cache.
 
 // This lets the app load faster on subsequent visits in production, and gives
@@ -35,6 +43,15 @@ export default function register() {
       if (isLocalhost) {
         // This is running on localhost. Lets check if a service worker still exists or not.
         checkValidServiceWorker(swUrl);
+
+        // Add some additional logging to localhost, pointing developers to the
+        // service worker/PWA documentation.
+        navigator.serviceWorker.ready.then(() => {
+          console.log(
+            'This web app is being served cache-first by a service ' +
+              'worker. To learn more, visit https://goo.gl/SC7cgQ'
+          );
+        });
       } else {
         // Is not local host. Just register service worker
         registerValidSW(swUrl);

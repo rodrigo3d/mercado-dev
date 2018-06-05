@@ -13,7 +13,8 @@ import ReactDOM from 'react-dom';
 // import 'bootstrap/dist/js/bootstrap.bundle';
 // import 'font-awesome/css/font-awesome.css';
 // import './index.css';
-import './carousel.css';
+
+import "./carousel.css";
 
 import App from './Components/App';
 import registerServiceWorker from './registerServiceWorker';

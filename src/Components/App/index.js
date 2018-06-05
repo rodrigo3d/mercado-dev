@@ -7,25 +7,26 @@
  */
 
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import { Footer } from '../Partials/footer'
-import Header from '../Partials/header'
+import Header from '../Partials/header';
 
-import HomePage from '../Home'
+import HomePage from '../Home';
+import CategoriesPage from '../Categories';
 
 
 class App extends React.Component {
   render() {
     return (
       <Router>
-      <div className="App">
-
-        <Route exact path="/" component={() => <HomePage />} />
-      </div>
+        <div className="App">
+          <Header />
+          <Route exact path="/" component={() => <HomePage />} />
+          <Route exact path="/categories" component={() => <CategoriesPage />} />
+        </div>
       </Router>
     );
-  }
-}
+  };
+};
 
 export default App;

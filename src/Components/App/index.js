@@ -7,14 +7,23 @@
  */
 
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
+import { Footer } from '../Partials/footer'
+import Header from '../Partials/header'
+
+import HomePage from '../Home'
 
 
 class App extends React.Component {
   render() {
     return (
+      <Router>
       <div className="App">
-Mercado Dev
+
+        <Route exact path="/" component={() => <HomePage />} />
       </div>
+      </Router>
     );
   }
 }

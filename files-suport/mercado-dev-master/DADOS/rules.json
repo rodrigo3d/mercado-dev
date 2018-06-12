@@ -1,0 +1,25 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": true,
+		"genres": {
+      ".indexOn": ["name"]
+		},
+    "series": {
+      ".indexOn": ["genre", "status"]
+		}
+
+    //".read": "auth != null",
+    //".write": "auth != null"
+		//"genres": {
+    //  ".read": false
+    //},
+    //"series": {
+    //  ".read": false,
+		//	".write": "auth != null"
+    //},
+    //"users": {
+		//	".write": true
+    //}
+  }
+}

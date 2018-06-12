@@ -1,0 +1,208 @@
+{
+  "adverts": {
+    "1": {
+      "category": "esportes-e-lazer",
+      "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+      "name": "Bicicleta Caloi 1",
+      "phone": "35 99999999",
+      "photo": "http://placehold.it/200x140",
+      "price": "a combinar",
+      "salesman": "Tulio Faria"
+    },
+    "2": {
+      "category": "esportes-e-lazer",
+      "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+      "name": "Bicicleta Caloi 2",
+      "phone": "35 99999999",
+      "photo": "http://placehold.it/200x140",
+      "price": "a combinar",
+      "salesman": "Tulio Faria"
+    },
+    "I0": {
+      "category": "Automóveis",
+      "description": "This",
+      "name": "This",
+      "phone": "35 99999999",
+      "photo": "http://placehold.it/200x140",
+      "price": "a combinar",
+      "salesman": "Tulio Faria"
+    },
+    "A1": {
+      "category": "esportes-e-lazer",
+      "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+      "name": "Bicicleta Caloi 2",
+      "phone": "35 99999999",
+      "photo": "http://placehold.it/200x140",
+      "price": "a combinar",
+      "salesman": "Tulio Faria"
+    },
+    "A2": {
+      "category": "esportes-e-lazer",
+      "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+      "name": "Bicicleta Caloi 2",
+      "phone": "35 99999999",
+      "photo": "http://placehold.it/200x140",
+      "price": "a combinar",
+      "salesman": "Tulio Faria"
+    },
+    "A3": {
+      "category": "esportes-e-lazer",
+      "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+      "name": "Bicicleta Caloi 2",
+      "phone": "35 99999999",
+      "photo": "http://placehold.it/200x140",
+      "price": "a combinar",
+      "salesman": "Tulio Faria"
+    },
+    "A4": {
+      "category": "esportes-e-lazer",
+      "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+      "name": "Bicicleta Caloi 2",
+      "phone": "35 99999999",
+      "photo": "http://placehold.it/200x140",
+      "price": "a combinar",
+      "salesman": "Tulio Faria"
+    },
+    "A5": {
+      "category": "esportes-e-lazer",
+      "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+      "name": "Bicicleta Caloi 2",
+      "phone": "35 99999999",
+      "photo": "http://placehold.it/200x140",
+      "price": "a combinar",
+      "salesman": "Tulio Faria"
+    },
+    "A6": {
+      "category": "esportes-e-lazer",
+      "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+      "name": "Bicicleta Caloi 2",
+      "phone": "35 99999999",
+      "photo": "http://placehold.it/200x140",
+      "price": "a combinar",
+      "salesman": "Tulio Faria"
+    },
+    "A7": {
+      "category": "esportes-e-lazer",
+      "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+      "name": "Bicicleta Caloi 2",
+      "phone": "35 99999999",
+      "photo": "http://placehold.it/200x140",
+      "price": "a combinar",
+      "salesman": "Tulio Faria"
+    },
+    "A8": {
+      "category": "esportes-e-lazer",
+      "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+      "name": "Bicicleta Caloi 2",
+      "phone": "35 99999999",
+      "photo": "http://placehold.it/200x140",
+      "price": "a combinar",
+      "salesman": "Tulio Faria"
+    },
+    "A9": {
+      "category": "esportes-e-lazer",
+      "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+      "name": "Bicicleta Caloi 2",
+      "phone": "35 99999999",
+      "photo": "http://placehold.it/200x140",
+      "price": "a combinar",
+      "salesman": "Tulio Faria"
+    },
+    "3": {
+      "category": "esportes-e-lazer",
+      "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+      "name": "Bicicleta Caloi 3",
+      "phone": "35 99999999",
+      "photo": "http://placehold.it/200x140",
+      "price": "a combinar",
+      "salesman": "Tulio Faria"
+    },
+    "-LB3AcT1PNXRtahkk7OV": {
+      "category": "eletronicos",
+      "description": "333",
+      "name": "333",
+      "phone": "333",
+      "photo": "https://firebasestorage.googleapis.com/v0/b/mercadodev-11845.appspot.com/o/Desert.jpg?alt=media&token=86e3a3e2-a833-4821-8140-7d2eb1e16cbb",
+      "price": "333",
+      "salesman": "333"
+    },
+    "-LB3B1QtlTTah8QR38NG": {
+      "category": "para-sua-casa",
+      "description": "9999",
+      "name": "9999",
+      "phone": "9999",
+      "photo": "https://firebasestorage.googleapis.com/v0/b/mercadodev-11845.appspot.com/o/Jellyfish.jpg?alt=media&token=da67dfbc-aa63-4025-a67d-7f36efe9ad3d",
+      "price": "9999",
+      "salesman": "9999"
+    },
+    "-LB3dRxT8TdEmNM6M_Rw": {
+      "category": "esportes-e-lazer",
+      "description": "4444",
+      "name": "4444",
+      "phone": "4444",
+      "photo": "https://firebasestorage.googleapis.com/v0/b/mercadodev-11845.appspot.com/o/Hydrangeas.jpg?alt=media&token=d087a687-17d3-4bb6-ac08-f01561a58570",
+      "price": "4444",
+      "salesman": "4444"
+    },
+    "-LB7RL8NP98MzmXQ_Zsl": {
+      "category": "Animais e Acessórios",
+      "description": "156",
+      "name": "156",
+      "phone": "156",
+      "photo": "https://firebasestorage.googleapis.com/v0/b/mercadodev-11845.appspot.com/o/IMG-20180424-WA0008.jpg?alt=media&token=dc1436f4-9a71-462e-b8c4-e7eae663c97f",
+      "price": "156",
+      "salesman": "156"
+    },
+    "-LBFxhiKfdrYRWHhcl5X": {
+      "category": "imoveis",
+      "description": "cat",
+      "name": "Cat test",
+      "phone": "078677e573663",
+      "photo": "https://firebasestorage.googleapis.com/v0/b/mercadodev-11845.appspot.com/o/k2.jpg?alt=media&token=37a1331a-fec1-4c77-bb0b-254274d6c794",
+      "price": "500",
+      "salesman": "kitty"
+    }
+  },
+  "categories": [
+    {
+      "category": "Automóveis",
+      "icon": "fa-car",
+      "url": "automoveis"
+    },
+    {
+      "category": "Imóveis",
+      "icon": "fa-home",
+      "url": "imoveis"
+    },
+    {
+      "category": "Eletrônicos",
+      "icon": "fa-mobile",
+      "url": "eletronicos"
+    },
+    {
+      "category": "Para sua casa",
+      "icon": "fa-lightbulb-o",
+      "url": "para-sua-casa"
+    },
+    {
+      "category": "Empregos e Negócios",
+      "icon": "fa-briefcase",
+      "url": "empregos-e-negocios"
+    },
+    {
+      "category": "Esportes e Lazer",
+      "icon": "fa-bicycle",
+      "url": "esportes-e-lazer"
+    },
+    {
+      "category": "Música e Hobbies",
+      "icon": "fa-music",
+      "url": "musica-e-hobbies"
+    },
+    {
+      "category": "Animais e Acessórios",
+      "icon": "fa-paw",
+      "url": "animais-e-acessorios"
+    }
+  ]
+}

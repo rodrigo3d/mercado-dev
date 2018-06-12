@@ -1,0 +1,23 @@
+{
+  "name": "mercado-dev",
+  "version": "0.1.0",
+  "private": false,
+  "scripts": {
+    "start": "react-scripts start .env",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "push": "git add . && git commit -m \"[Atualização Automática]\" && git push -u origin master"
+  },
+  "dependencies": {
+    "firebase": "^5.0.4",
+    "react": "^16.4.0",
+    "re-base": "^3.2.2",
+    "react-dom": "^16.4.0",
+    "react-router": "^4.3.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-hash-link": "^1.2.0",
+    "react-scripts": "1.1.4"
+  },
+  "devDependencies": {}
+}

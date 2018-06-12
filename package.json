@@ -1,0 +1,34 @@
+{
+  "name": "minhas-series",
+  "author": "Rodrigo Ribeiro <me@rodrigo3d.com>",
+  "description": "Application made in the course of devReactJS by Tulio Faria",
+  "license": "MIT",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "firebase": "^5.0.4",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "prop-types": "^15.6.1",
+    "re-base": "^3.2.2",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.2.2",
+    "react-router-hash-link": "^1.2.0",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start .env",
+    "build": "react-scripts build .env",
+    "start-env": "react-app-env --env-file=.env.dev start",
+    "build-env": "react-app-env --env-file=.env.prod build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "push": "git add . && git commit -m \"[Atualização Automática]\" && git push -u origin master"
+  },
+  "devDependencies": {
+    "react-app-env": "^1.2.0"
+  }
+}
